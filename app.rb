@@ -117,6 +117,8 @@ module Linguist
       end
     end
 
+    set :show_exceptions, false
+
     # Index, Log-in/out
     # ==========================================================================
     get "/" do
