@@ -704,6 +704,11 @@ module Linguist
       send_notification(from, to, text)
       redirect to("/admin/notifications")
     end
+
+    not_found do
+      status 404
+      erb :oops
+    end
   end
 end
 
