@@ -26,6 +26,7 @@ sudo cp phantomjs-1.9.7-linux-x86_64/bin/phantomjs /usr/local/bin
 rm -rf phantomjs-1.9.7-linux-x86_64*
 
 # ruby 2.1 (rvm)
+command curl -sSL https://rvm.io/mpapis.asc | gpg --import -
 curl -sSL https://get.rvm.io | bash -s stable --ruby=2.1
 echo 'source "$HOME/.rvm/scripts/rvm"' >> "$HOME/.bashrc"
 source "$HOME/.rvm/scripts/rvm"
