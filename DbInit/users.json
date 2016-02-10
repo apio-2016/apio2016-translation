@@ -4,7 +4,7 @@
     "users": [
         {"username":"API",      "password":"",          "role":"admin",         "lang":"xx-XX",         "country":"KOR",        "font":"",              "direction":"ltr",      "plaintext_editor":"no" },
         {"username":"admin",    "password":"ADMPWD",    "role":"admin",         "lang":"xx-XX",         "country":"KOR",        "font":"",              "direction":"ltr",      "plaintext_editor":"no" },
-        {"username":"ISC",      "password":"ISCPWD",    "role":"admin",         "lang":"en-ISC",        "country":"KOR",        "font":"",              "direction":"ltr",      "plaintext_editor":"no" },
+        {"username":"HSC",      "password":"HSCPWD",    "role":"admin",         "lang":"en-HSC",        "country":"KOR",        "font":"",              "direction":"ltr",      "plaintext_editor":"no" },
 
         {"username":"KOR",      "password":"KORPWD",    "role":"user",          "lang":"ko-KOR",        "country":"KOR",        "font":"",              "direction":"ltr",      "plaintext_editor":"no" }
     ]

@@ -182,34 +182,34 @@ module Linguist
       redirect to("/settings")
     end
 
-    # Get ISC tasks
+    # Get HSC tasks
     # ==========================================================================
-    get "/ISC/tasks/:task_id/releases" do |task_id|
+    get "/HSC/tasks/:task_id/releases" do |task_id|
       login_required!
       redis_key = "tasks:#{task_id}"
       @task = @@redis.hgetall(redis_key).symbolize_keys!
 
-      redis_key = "users:isc:tasks:#{task_id}:releases"
+      redis_key = "users:hsc:tasks:#{task_id}:releases"
       @releases = @@redis.lrange(redis_key, 0, -1).map do |item|
         JSON.parse(item).symbolize_keys!
       end
       @releases.sort! {|a,b| a[:created_at] <=> b[:created_at] }
 
-      erb :isc_releases
+      erb :hsc_releases
     end
 
-    get "/ISC/tasks/:task_id/diff" do |task_id|
+    get "/HSC/tasks/:task_id/diff" do |task_id|
       login_required!
       redis_key = "tasks:#{task_id}"
       @task = @@redis.hgetall(redis_key).symbolize_keys!
 
-      redis_key = "users:isc:tasks:#{task_id}:releases"
+      redis_key = "users:hsc:tasks:#{task_id}:releases"
       @releases = @@redis.lrange(redis_key, 0, -1)
 
       index = 0
       @releases = @releases.map do |item|
         item = JSON.parse(item).symbolize_keys!
-        revision_key = "users:isc:tasks:#{task_id}:revisions"
+        revision_key = "users:hsc:tasks:#{task_id}:revisions"
         revision = JSON.parse(@@redis.lindex(revision_key, item[:revision_num])).symbolize_keys!
         item.merge!({:text => revision[:text]})
         item.merge!({:num => index})
@@ -217,12 +217,12 @@ module Linguist
         item
       end
       @releases.sort! {|a,b| a[:created_at] <=> b[:created_at] }
-      erb :isc_diff
+      erb :hsc_diff
     end
 
-    get "/ISC/tasks/:task_id.md" do |task_id|
+    get "/HSC/tasks/:task_id.md" do |task_id|
       login_required!
-      redis_key = "users:isc:tasks:#{task_id}:revisions"
+      redis_key = "users:hsc:tasks:#{task_id}:revisions"
 
       # last revision or specified
       if params[:revision]
@@ -238,11 +238,11 @@ module Linguist
       return @revision[:text]
     end
 
-    get "/ISC/tasks/:task_id.html" do |task_id|
+    get "/HSC/tasks/:task_id.html" do |task_id|
       login_required!
 
-      @owner = get_user("isc")
-      redis_key = "users:isc:tasks:#{task_id}:revisions"
+      @owner = get_user("hsc")
+      redis_key = "users:hsc:tasks:#{task_id}:revisions"
 
       # last revision or specifed
       if params[:revision]
@@ -261,17 +261,17 @@ module Linguist
       erb :tasks_preview
     end
 
-    get "/ISC/tasks/:task_id.pdf" do |task_id|
+    get "/HSC/tasks/:task_id.pdf" do |task_id|
       login_required!
 
-      preview_url = "#{request.scheme}://127.0.0.1:8888/ISC/tasks/#{task_id}.html?api_token=#{@@api_token}"
-      @owner = get_user("isc")
+      preview_url = "#{request.scheme}://127.0.0.1:8888/HSC/tasks/#{task_id}.html?api_token=#{@@api_token}"
+      @owner = get_user("hsc")
 
       if params[:revision]
         revision_num = params[:revision].to_i
         preview_url = "#{preview_url}&revision=#{revision_num}"
       else
-        redis_key = "users:isc:tasks:#{task_id}:revisions"
+        redis_key = "users:hsc:tasks:#{task_id}:revisions"
         revision_num = @@redis.llen(redis_key) - 1
       end
 
@@ -355,12 +355,12 @@ module Linguist
 
       last_release_ver = @@redis.llen(redis_key) - 1
 
-      # ISC specified -- broadcast task updates
-      if @user[:username] == "isc"
+      # HSC specified -- broadcast task updates
+      if @user[:username] == "hsc"
         redis_key = "tasks:#{task_id}"
         task = @@redis.hgetall(redis_key).symbolize_keys!
 
-        text = %Q{ISC updates "#{task[:title]}" to version #{last_release_ver+1}: #{release_note}.}
+        text = %Q{HSC updates "#{task[:title]}" to version #{last_release_ver+1}: #{release_note}.}
         send_notification(@user[:username], ".*", text)
       else
         text = %Q{#{@user[:username]} releases version #{last_release_ver+1} of task #{task_id}.}

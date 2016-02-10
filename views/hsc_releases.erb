@@ -2,9 +2,9 @@
 <%= render :partial => :navbar %>
 
 <div class="body container">
-  <h1>ISC versions - "<%= @task[:title] %>"</h1>
+  <h1>HSC versions - "<%= @task[:title] %>"</h1>
   <hr>
-  <a href="/ISC/tasks/<%= @task[:id] %>/diff">See diffs</a>
+  <a href="/HSC/tasks/<%= @task[:id] %>/diff">See diffs</a>
   <hr>
   <table class="table table-hover sortable">
     <thead>
@@ -23,8 +23,8 @@
         <td><%= release_num %></td>
         <td><span data-unixtime="<%= release[:created_at] %>"><%= release[:created_at] %></span></td>
         <td><%= release[:note] %></td>
-        <td><a href="/ISC/tasks/<%= @task[:id] %>.md?revision=<%= release[:revision_num] %>">Markdown</a></td>
-        <td><a href="/ISC/tasks/<%= @task[:id] %>.pdf?revision=<%= release[:revision_num] %>">PDF</a></td>
+        <td><a href="/HSC/tasks/<%= @task[:id] %>.md?revision=<%= release[:revision_num] %>">Markdown</a></td>
+        <td><a href="/HSC/tasks/<%= @task[:id] %>.pdf?revision=<%= release[:revision_num] %>">PDF</a></td>
       </tr>
       <% release_num += 1 %>
       <% end %>

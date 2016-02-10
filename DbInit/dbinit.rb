@@ -79,11 +79,11 @@ users.each do |user_data|
   end
 end
 
-# initialize ISC releases
+# initialize HSC releases
 tasks_keys = $redis.keys("tasks:*").select{|k| k.count(":") == 1}
 tasks_keys.each do |task_key|
 task_id = task_key.split(":")[1]
-redis_key = "users:isc:tasks:#{task_id}:releases"
+redis_key = "users:hsc:tasks:#{task_id}:releases"
 $redis.rpush(redis_key, {
   :revision_num => 0,
   :note => 'initial commit',

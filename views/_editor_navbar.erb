@@ -20,16 +20,16 @@
           </ul>
         </li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">ISC <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">HSC <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="/ISC/tasks/<%= @task[:id] %>.pdf">Download PDF</a></li>
-            <li><a href="/ISC/tasks/<%= @task[:id] %>.md">Download Markdown</a></li>
-            <li><a href="/ISC/tasks/<%= @task[:id] %>/releases">Releases</a></li>
+            <li><a href="/HSC/tasks/<%= @task[:id] %>.pdf">Download PDF</a></li>
+            <li><a href="/HSC/tasks/<%= @task[:id] %>.md">Download Markdown</a></li>
+            <li><a href="/HSC/tasks/<%= @task[:id] %>/releases">Releases</a></li>
           </ul>
         </li>
         <li id="save-btn" class="disabled"><a href="#">Saved</a></li>
-        <% if @user[:username] == "isc" %>
-        <!-- only ISC hsa the option to publish a release -->
+        <% if @user[:username] == "hsc" %>
+        <!-- only HSC hsa the option to publish a release -->
         <li id="publish-btn"><a href="#">Publish</a></li>
         <% end %>
       </ul>

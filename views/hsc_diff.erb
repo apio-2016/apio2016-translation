@@ -6,7 +6,7 @@
 <%= render :partial => :navbar %>
 
 <div class="body container">
-  <h1>ISC Diffs - "<%= @task[:title] %>"</h1>
+  <h1>HSC Diffs - "<%= @task[:title] %>"</h1>
   <hr>
   <input id="slider" style="width: 300px" type="text" value="" data-slider-min="<%= @releases.first[:num]+2 %>" data-slider-max="<%= @releases.last[:num]+1 %>" data-slider-step="1" data-slider-value="<%= @releases.last[:num]+1 %>" data-slider-selection="after" />
   <hr>

@@ -33,7 +33,7 @@
         <th data-default-sort="asc">Id</th>
         <th>Title</th>
         <th>Revisions #</th>
-        <th>ISC Versions</th>
+        <th>HSC Versions</th>
         <th>Download Markdown</th>
         <th>Download PDF</th>
         <th>Edit</th>
@@ -46,7 +46,7 @@
         <td><%= task[:id] %></td>
         <td><%= task[:title] %></td>
         <td><%= task[:last_revision_num]+1 %></td>
-        <td><a href="/ISC/tasks/<%= task[:id] %>/releases">ISC Versions</a></td>
+        <td><a href="/HSC/tasks/<%= task[:id] %>/releases">HSC Versions</a></td>
         <td><a href="/tasks/<%= task[:id] %>.md">Markdown</a></td>
         <td><a href="/tasks/<%= task[:id] %>.pdf">PDF</a></td>
         <% if task[:is_frozen] %>
