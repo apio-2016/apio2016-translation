@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # For AWS
-sudo apt-get install sudo apt-get install fontconfig fontconfig-config fonts-dejavu-core fonts-droid \
+sudo apt-get install fontconfig fontconfig-config fonts-dejavu-core fonts-droid \
   fonts-freefont-ttf fonts-kacst fonts-kacst-one fonts-khmeros-core fonts-lao \
   fonts-liberation fonts-lklug-sinhala fonts-nanum fonts-opensymbol \
   fonts-sil-abyssinica fonts-sil-padauk fonts-takao-pgothic fonts-thai-tlwg \
