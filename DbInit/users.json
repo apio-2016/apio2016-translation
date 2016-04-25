@@ -3,10 +3,33 @@
         {"username":"user",     "password":"",          "role":"user",          "lang":"xx-XX",         "country":"Mars",       "font":"",              "direction":"ltr",      "plaintext_editor":"no" },
     "users": [
         {"username":"API",      "password":"",          "role":"admin",         "lang":"xx-XX",         "country":"KOR",        "font":"",              "direction":"ltr",      "plaintext_editor":"no" },
-        {"username":"admin",    "password":"ADMPWD",    "role":"admin",         "lang":"xx-XX",         "country":"KOR",        "font":"",              "direction":"ltr",      "plaintext_editor":"no" },
-        {"username":"HSC",      "password":"HSCPWD",    "role":"admin",         "lang":"en-HSC",        "country":"KOR",        "font":"",              "direction":"ltr",      "plaintext_editor":"no" },
+        {"username":"admin",    "password":"193CA7",    "role":"admin",         "lang":"xx-XX",         "country":"KOR",        "font":"",              "direction":"ltr",      "plaintext_editor":"no" },
+        {"username":"HSC",      "password":"D8FA77",    "role":"user",         "lang":"en",        "country":"KOR",        "font":"",              "direction":"ltr",      "plaintext_editor":"no" },
 
-        {"username":"KOR",      "password":"KORPWD",    "role":"user",          "lang":"ko-KOR",        "country":"KOR",        "font":"",              "direction":"ltr",      "plaintext_editor":"no" }
+        {"username":"TKM",	"password":"7365E9",	"role":"user",	"lang":"tk_TM",	"country":"TKM",	"font":"",	"direction":"ltr",	"plain_texteditor":"no"},
+        {"username":"VNM",	"password":"B3E796",	"role":"user",	"lang":"vi_VN",	"country":"VNM",	"font":"",	"direction":"ltr",	"plain_texteditor":"no"},
+        {"username":"THA",	"password":"92E0D4",	"role":"user",	"lang":"th_TH",	"country":"THA",	"font":"",	"direction":"ltr",	"plain_texteditor":"no"},
+        {"username":"JPN",	"password":"284B00",	"role":"user",	"lang":"jp_JP",	"country":"JPN",	"font":"",	"direction":"ltr",	"plain_texteditor":"no"},
+        {"username":"CHN",	"password":"3DC06B",	"role":"user",	"lang":"zh_CN",	"country":"CHN",	"font":"",	"direction":"ltr",	"plain_texteditor":"no"},
+        {"username":"ARM",	"password":"A5B2F8",	"role":"user",	"lang":"hy_AM",	"country":"ARM",	"font":"",	"direction":"ltr",	"plain_texteditor":"no"},
+        {"username":"IDN",	"password":"17F6C2",	"role":"user",	"lang":"id_ID",	"country":"IDN",	"font":"",	"direction":"ltr",	"plain_texteditor":"no"},
+        {"username":"MNG",	"password":"16A7E9",	"role":"user",	"lang":"mn_MN",	"country":"MNG",	"font":"",	"direction":"ltr",	"plain_texteditor":"no"},
+        {"username":"RUS",	"password":"8A3B5A",	"role":"user",	"lang":"ru_RU",	"country":"RUS",	"font":"",	"direction":"ltr",	"plain_texteditor":"no"},
+        {"username":"TWN",	"password":"50D5ED",	"role":"user",	"lang":"zh_TW",	"country":"TWN",	"font":"",	"direction":"ltr",	"plain_texteditor":"no"},
+        {"username":"MAC",	"password":"7587EE",	"role":"user",	"lang":"zh_MO",	"country":"MAC",	"font":"",	"direction":"ltr",	"plain_texteditor":"no"},
+        {"username":"MYS",	"password":"F02025",	"role":"user",	"lang":"en_MY",	"country":"MYS",	"font":"",	"direction":"ltr",	"plain_texteditor":"no"},
+        {"username":"KAZ",	"password":"95FADB",	"role":"user",	"lang":"ru_KZ",	"country":"KAZ",	"font":"",	"direction":"ltr",	"plain_texteditor":"no"},
+        {"username":"TJK",	"password":"FC6AA2",	"role":"user",	"lang":"ru_TJ",	"country":"TJK",	"font":"",	"direction":"ltr",	"plain_texteditor":"no"},
+        {"username":"AUS",	"password":"F03A8D",	"role":"user",	"lang":"en_AU",	"country":"AUS",	"font":"",	"direction":"ltr",	"plain_texteditor":"no"},
+        {"username":"ISR",	"password":"60AD4D",	"role":"user",	"lang":"he_IL",	"country":"ISR",	"font":"",	"direction":"rtl",	"plain_texteditor":"no"},
+        {"username":"IRN",	"password":"2C07AC",	"role":"user",	"lang":"fa_IR",	"country":"IRN",	"font":"",	"direction":"rtl",	"plain_texteditor":"no"},
+        {"username":"TUR",	"password":"D90442",	"role":"user",	"lang":"tr_TR",	"country":"TUR",	"font":"",	"direction":"ltr",	"plain_texteditor":"no"},
+        {"username":"PHL",	"password":"C84321",	"role":"user",	"lang":"en_EN",	"country":"PHL",	"font":"",	"direction":"ltr",	"plain_texteditor":"no"},
+        {"username":"KGZ",	"password":"0EA98A",	"role":"user",	"lang":"ky_KG",	"country":"KGZ",	"font":"",	"direction":"ltr",	"plain_texteditor":"no"},
+        {"username":"HKG",	"password":"A51A4A",	"role":"user",	"lang":"zh_HK",	"country":"HKG",	"font":"",	"direction":"ltr",	"plain_texteditor":"no"},
+        {"username":"UZB",	"password":"4F30F2",	"role":"user",	"lang":"ru_RU",	"country":"UZB",	"font":"",	"direction":"ltr",	"plain_texteditor":"no"},
+        {"username":"IND",	"password":"6FFBA5",	"role":"user",	"lang":"en_IN",	"country":"IND",	"font":"",	"direction":"ltr",	"plain_texteditor":"no"},
+        {"username":"KOR",	"password":"837DE0",    "role":"user",	"lang":"ko_KR",	"country":"KOR",	"font":"",	"direction":"ltr",	"plaintext_editor":"no" }
     ]
 
 }
